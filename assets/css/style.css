@@ -1,0 +1,23 @@
+.wc-rw-order-currency-changer-notice {
+    padding: 15px;
+    margin: 20px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    position: relative;
+}
+
+.wc-rw-order-currency-changer-notice-warning {
+    color: #8a6d3b;
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+}
+
+
+.wc-rw-order-currency-changer-is-dismissible {
+    position: relative;
+    padding-right: 35px;
+}
+
+.wc-rw-order-currency-changer-change-info strong {
+    font-size: 1.3em;
+}
