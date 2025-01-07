@@ -131,6 +131,9 @@ class Wc_Rw_Order_Currency_Changer_Init
             $order->save();
 
             update_option('woocommerce_currency', $target_order_currency);
+            add_filter('woocommerce_currency', function () use ($target_order_currency) {
+                return $target_order_currency;
+            }, PHP_INT_MAX);
 
         }
 
