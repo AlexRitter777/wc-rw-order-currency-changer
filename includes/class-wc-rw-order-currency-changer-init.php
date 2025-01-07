@@ -130,6 +130,8 @@ class Wc_Rw_Order_Currency_Changer_Init
 
             $order->save();
 
+            update_option('woocommerce_currency', $target_order_currency);
+
         }
 
     }
@@ -145,6 +147,8 @@ class Wc_Rw_Order_Currency_Changer_Init
     public function restore_site_currency() {
 
         $original_currency = get_transient('wc-rw-choc-current-currency');
+
+        update_option('woocommerce_currency', $original_currency);
 
         // Set the original currency in the WooCommerce session
         WC()->session->set('currency', $original_currency);
