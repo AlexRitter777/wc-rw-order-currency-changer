@@ -19,14 +19,12 @@ class Wc_Rw_Order_Currency_Changer_Init
         add_filter('woocommerce_cart_totals_order_total_html',[$this, 'show_total_in_target_currency']);
         add_action('woocommerce_checkout_create_order', [$this, 'change_order_currency'], 10, 2);
         add_action('woocommerce_thankyou', [$this, 'restore_site_currency'], 10);
-        add_filter('woocommerce_available_payment_gateways', function($available_gateways) {
-            $target_currency = get_option('wc_rw_occh_target_currency', 'USD');
-
-            add_filter('woocommerce_currency', function () use ($target_currency) {
+        add_filter('woocommerce_currency', function($currency) {
+            if (isset($_GET['wc-api']) && strpos($_GET['wc-api'], 'gpwebpaybinder') !== false) {
+                $target_currency = get_option('wc_rw_occh_target_currency', 'USD');
                 return $target_currency;
-            });
-
-            return $available_gateways;
+            }
+            return $currency;
         });
     }
 
