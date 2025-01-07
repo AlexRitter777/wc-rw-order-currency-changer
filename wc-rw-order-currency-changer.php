@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 class Wc_Rw_Order_Currency_Changer
 {
 
-    const VERSION = '1.0.0';
+    const VERSION = '1.1.1';
 
     /**
      * Wc_Rw_Order_Currency_Changer constructor.
