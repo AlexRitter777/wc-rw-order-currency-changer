@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 class Wc_Rw_Order_Currency_Changer
 {
 
-    const VERSION = '1.1.1';
+    const VERSION = '1.1.2';
 
     /**
      * Wc_Rw_Order_Currency_Changer constructor.
@@ -48,7 +48,7 @@ class Wc_Rw_Order_Currency_Changer
         add_action('wp_enqueue_scripts', [$this, 'wc_rw_load_public_scripts']);
 
         // Add a custom settings page to WooCommerce
-        add_filter('plugins_loaded', [$this, 'wc_rw_create_woocommerce_custom_settings_page']);
+        add_filter('plugins_loaded', [$this, 'wc_rw_create_woocommerce_custom_settings_page'], 10);
 
     }
 
