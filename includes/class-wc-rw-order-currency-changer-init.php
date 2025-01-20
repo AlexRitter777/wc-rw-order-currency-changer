@@ -118,7 +118,15 @@ class Wc_Rw_Order_Currency_Changer_Init
                 $item->set_subtotal($item->get_subtotal() * $target_order_currency_rate);
             }
 
-            $order->set_shipping_total($order->get_shipping_total() * $target_order_currency_rate);
+            $new_shipping_total = $order->get_shipping_total() * $target_order_currency_rate;
+
+            $order->set_shipping_total($new_shipping_total);
+
+            // Update shipping method metadata
+            foreach ($order->get_shipping_methods() as $shipping_id => $shipping_item) {
+                $shipping_item->set_total($new_shipping_total);
+                $shipping_item->save(); // Save the changes for the specific shipping method
+            }
 
             $order->set_total($order->get_total() * $target_order_currency_rate);
 
