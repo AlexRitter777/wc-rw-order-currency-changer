@@ -3,7 +3,7 @@
 /**
  * Plugin Name: WooCommerce RW Order Currency Changer
  * Description: A plugin to change the order and payment currency in WooCommerce based on a specified currency and exchange rate. Ensures recalculation of order totals, updates metadata, and displays the correct amounts on the checkout page, emails, and payments. Note: The plugin does not support taxes or additional fees, as it is designed for use cases where such charges are not applicable. Compatible with Fox Currency Switcher for seamless currency handling.
- * Version: 1.0.0
+ * Version: 1.2.0
  * Author: Alexej Bogačev (RAIN WOOLF s.r.o.)
  * Text Domain: wc-rw-order-currency-changer
  * Domain Path: /languages
@@ -20,7 +20,7 @@ if (!defined('ABSPATH')) {
 class Wc_Rw_Order_Currency_Changer
 {
 
-    const VERSION = '1.1.3';
+    const VERSION = '1.2.0';
 
     /**
      * Wc_Rw_Order_Currency_Changer constructor.

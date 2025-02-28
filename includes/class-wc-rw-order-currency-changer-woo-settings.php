@@ -100,6 +100,19 @@ class Wc_Rw_Order_Currency_Changer_Woo_Settings extends WC_Settings_Page {
                 ],
             ],
             [
+                'title'    => __('KZT', 'wc-rw-order-currency-changer'),
+                'id'       => 'wc_rw_occh_rate_SAR',
+                'type'     => 'number',
+                'default'  => '1.0',
+                'desc'     => __('Specify the exchange rate to the WooCommerce base currency.', 'wc-rw-order-currency-changer'),
+                'desc_tip' => true,
+                'custom_attributes' => [
+                    'step' => '0.001',
+                    'min'  => '0.01',
+                    'max'  => '1000'
+                ],
+            ],
+            [
                 'type' => 'sectionend',
                 'id'   => 'wc_rw_order_currency_changer_settings_section',
             ],
