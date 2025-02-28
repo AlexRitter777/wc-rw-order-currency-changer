@@ -6,7 +6,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc-rw-order-"
 "currency-changer\n"
 "POT-Creation-Date: 2025-01-04T00:06:20+03:00\n"
-"PO-Revision-Date: 2025-01-03 22:50+0100\n"
+"PO-Revision-Date: 2025-02-28 14:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ru\n"
@@ -39,11 +39,11 @@ msgstr ""
 
 #: includes/class-wc-rw-order-currency-changer-init.php:83
 msgid "Your order will be processed and paid in "
-msgstr ""
+msgstr "Ваш заказ будет размещен и оплачен в валюте "
 
 #: includes/class-wc-rw-order-currency-changer-init.php:84
 msgid "The final amount is "
-msgstr ""
+msgstr "Финальная сумма заказа - "
 
 #: includes/class-wc-rw-order-currency-changer-woo-settings.php:7
 msgid "Order Currency"
