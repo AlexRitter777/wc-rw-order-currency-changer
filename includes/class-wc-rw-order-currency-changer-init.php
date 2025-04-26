@@ -118,7 +118,7 @@ class Wc_Rw_Order_Currency_Changer_Init
                 $item->set_subtotal($item->get_subtotal() * $target_order_currency_rate);
             }
 
-            $new_shipping_total = $order->get_shipping_total() * $target_order_currency_rate;
+            $new_shipping_total = wc_format_decimal($order->get_shipping_total() * $target_order_currency_rate, 2);
 
             $order->set_shipping_total($new_shipping_total);
 
